@@ -14,17 +14,16 @@ pages:
   
   # Les commandes de construction
   script:
-    - npm install       # 1. Installe les dépendances
-    - npm run build     # 2. Lance la construction de l'application (crée un dossier 'dist')
-    - rm -rf public     # 3. Suppression du dossier public pour éviter les conflits
-    - mv dist public    # 4. Renomme le dossier de sortie 'dist' en 'public' (requis par GitLab Pages)
+    - npm install
+    - npm run build
+    - rm -rf public
+    - mv dist public    # Renomme le dossier de sortie 'dist' en 'public' (requis par GitLab Pages)
   
   # Définition des artefacts : les fichiers qui seront hébergés
   artifacts:
     paths:
       - public
   
-  # Condition : s'exécute uniquement sur la branche principale (ou 'main')
+  # Condition : s'exécute uniquement sur la branche master
   only:
-    - master 
-    # Remplacez 'master' par 'main' si c'est le nom de votre branche principale
+    - master
