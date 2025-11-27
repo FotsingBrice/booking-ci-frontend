@@ -8,6 +8,7 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
     "tailwind-init": "node ./node_modules/tailwindcss/lib/cli.js init -p"
   },
   "dependencies": {
